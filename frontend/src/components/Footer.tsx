@@ -1,0 +1,95 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        {/* Brand */}
+        <div className="footer-brand">
+           <img
+  src="/ecosa-logo.jpeg"
+  alt="ECOSA Logo"
+  className="footer-logo"
+/>
+          
+          <div>
+            <h3>ECOSA</h3>
+
+            <p>Equatorial College Ibanda Old Students Association</p>
+
+            <p className="footer-tagline">
+              Together for a <br />
+              Brighter Future.
+            </p>
+
+            <div className="social-links">
+              <a href="#" aria-label="X">
+                <img src="/x.png" alt="X" style={{ width: 20, height: 20 }} />
+              </a>
+
+              <a href="#" aria-label="Facebook">
+                <img src="/f.png" alt="Facebook" style={{ width: 20, height: 20 }} />
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <img src="/in.png" alt="LinkedIn" style={{ width: 20, height: 20 }} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Explore */}
+        <div className="footer-links">
+          <h4>Explore</h4>
+
+          <Link to="/">Home</Link>
+          <Link to="/about">About ECOSA</Link>
+          <Link to="/leaders">Leadership</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/resources">Resources</Link>
+        </div>
+
+        {/* Membership */}
+        <div className="footer-links">
+          <h4>Membership</h4>
+
+          <Link to="/register">Register</Link>
+          <Link to="/members">Members Directory</Link>
+          <Link to="/chapters">Chapters</Link>
+          <Link to="/payments">Membership Payments</Link>
+        </div>
+
+        {/* Community */}
+        <div className="footer-links">
+          <h4>Community</h4>
+
+          <Link to="/community">Community</Link>
+          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/contact">Contact Us</Link>
+        </div>
+
+        {/* Contact */}
+        <div className="footer-links">
+          <h4>Contact</h4>
+
+          <p>📞 +256 700 123 456</p>
+          <p>✉️ info@ecosa.org</p>
+
+          <p>
+            📍 Equatorial College Ibanda
+            <br />
+            Ibanda District, Uganda
+          </p>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        © {new Date().getFullYear()} ECOSA — Equatorial College Ibanda Old
+        Students Association. All Rights Reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
